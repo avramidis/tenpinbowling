@@ -1,5 +1,3 @@
-import numpy
-
 def checkStrike(frame):
     if frame[0] == 10:
         return True
