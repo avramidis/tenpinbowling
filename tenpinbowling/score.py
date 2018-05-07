@@ -13,10 +13,7 @@ def checkSpare(frame):
         return False
 
 def getScore(frames):
-    
-    print(frames)
     score = 0
-    
     for i in range(0, 3):
         score += sum(frames[i])
         if checkStrike(frames[i]):
@@ -24,17 +21,6 @@ def getScore(frames):
             if checkStrike(frames[i+1]):
                 score += frames[i+2][0]
 
-        print(frames[i])
-
-        # Calculate strike
-        # if rolls[i-2] == 10:
-        #     score += rolls[i]
-        #     score += rolls[i-1]
-
-        # Calculate spare
-        # if rolls[i-2] + rolls[i-1] == 10:
-        #     score += rolls[i]
-
-        # print(score)
-
+        if checkSpare(frames[i]):
+            score += frames[i+1][0]
     return score
