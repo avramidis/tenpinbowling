@@ -3,7 +3,7 @@ import sys
 sys.path.append('..')
 import tenpinbowling.score
 
-class TestSeriationMethods(unittest.TestCase):
+class TestScoreMethod(unittest.TestCase):
     
     def test_simple_getScore(self):
         frames = [[4, 3], [5, 4], [4, 4]]
