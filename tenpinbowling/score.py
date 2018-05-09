@@ -11,7 +11,7 @@ def checkStrike(frame):
         when the frame is not a strike.
 
     Raises:
-        TypeError: An error occurred accessing the bigtable.Table object.
+        TypeError: An error occurred accessing the frame object.
     """
 
     if len(frame)!=2 or (type(frame) is not type([])):
@@ -36,7 +36,7 @@ def checkSpare(frame):
         when the frame is not a strike.
 
     Raises:
-        TypeError: An error occurred accessing the bigtable.Table object.
+        TypeError: An error occurred accessing the frame object.
     """
 
     if len(frame)!=2 or (type(frame) is not type([])):
@@ -48,6 +48,21 @@ def checkSpare(frame):
         return False
 
 def getScore(frames):
+    """Calculates the score of a 10 pin bolwing game for one player.
+
+    TODO: explain the rules for the calculation of the score.
+
+    Args:
+        frames: A list with lists with two elements that indicate the pins hit by the player
+        at each throw of the ball.
+
+    Returns:
+        A scalar with the score.
+
+    Raises:
+        TypeError: An error occurred accessing the bigtable.Table object.
+    """
+
     score = 0
     for i in range(0, 3):
         score += sum(frames[i])
