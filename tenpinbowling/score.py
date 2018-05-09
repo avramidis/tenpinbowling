@@ -47,7 +47,7 @@ def checkSpare(frame):
     else:
         return False
 
-def getScore(frames):
+def getScore(frames, numFrames):
     """Calculates the score of a 10 pin bolwing game for one player.
 
     TODO: explain the rules for the calculation of the score.
@@ -55,6 +55,7 @@ def getScore(frames):
     Args:
         frames: A list with lists with two elements that indicate the pins hit by the player
         at each throw of the ball.
+        numFrame: The lenght of the game in frames.
 
     Returns:
         A scalar with the score.
@@ -64,7 +65,7 @@ def getScore(frames):
     """
 
     score = 0
-    for i in range(0, 3):
+    for i in range(0, numFrames):
         score += sum(frames[i])
         if checkStrike(frames[i]):
             score += sum(frames[i+1])
