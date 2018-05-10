@@ -11,23 +11,23 @@ class TestScoreMethod(unittest.TestCase):
         self.assertEqual(24, score)
 
     def test_strike_getScore(self):
-        frames = [[10, 0], [6, 3], [3, 2]]
+        frames = [[10], [6, 3], [3, 2]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(33, score)
 
-        frames = [[6, 3], [10, 0], [5, 4]]
+        frames = [[6, 3], [10], [5, 4]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(37, score)
 
-        frames = [[10, 0], [10, 0], [4, 5]]
+        frames = [[10], [10], [4, 5]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(52, score)
 
-        frames = [[3, 3], [4, 5], [10, 0], [10, 0], [10, 0]]
+        frames = [[3, 3], [4, 5], [10, 10, 10]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(45, score)
 
-        frames = [[10, 0], [10, 0], [10, 0], [10, 0], [10, 0]]
+        frames = [[10], [10], [10, 10, 10]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(90, score)
 
@@ -36,7 +36,7 @@ class TestScoreMethod(unittest.TestCase):
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(30, score)
 
-        frames = [[4, 6], [6, 3], [4, 6], [5, 0]]
+        frames = [[4, 6], [6, 3], [4, 6, 5]]
         score = tenpinbowling.score.getScore(frames,3)
         self.assertEqual(40, score)
         
