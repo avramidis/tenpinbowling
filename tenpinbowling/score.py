@@ -42,6 +42,9 @@ def checkSpare(frame):
     if (type(frame) is not type([])):
         raise TypeError("Input must be a list with two elements")
 
+    if checkStrike(frame) is True:
+        return False
+
     if frame[0] + frame[1] == 10 and frame[0] < 10:
         return True
     else:
@@ -65,13 +68,22 @@ def getScore(frames, numFrames):
     """
 
     score = 0
-    for i in range(0, numFrames):
+    for i in range(0, numFrames-1):
         score += sum(frames[i])
         if checkStrike(frames[i]):
-            score += sum(frames[i+1])
             if checkStrike(frames[i+1]):
-                score += frames[i+2][0]
+                score += frames[i+1][0]
+                if i+1==numFrames-1:
+                    score += frames[i+1][1]
+                else:
+                    score += frames[i+2][0]
+            else:
+                score += sum(frames[i+1])
 
         if checkSpare(frames[i]):
-            score += frames[i+1][0]
+            if i<numFrames-1:
+                score += frames[i+1][0]
+        
+    score += sum(frames[numFrames-1])
+
     return score
