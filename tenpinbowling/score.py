@@ -14,7 +14,7 @@ def checkStrike(frame):
         TypeError: An error occurred accessing the frame object.
     """
 
-    if len(frame)!=2 or (type(frame) is not type([])):
+    if (type(frame) is not type([])):
         raise TypeError("Input must be a list with two elements")
 
     if frame[0] == 10:
@@ -39,7 +39,7 @@ def checkSpare(frame):
         TypeError: An error occurred accessing the frame object.
     """
 
-    if len(frame)!=2 or (type(frame) is not type([])):
+    if (type(frame) is not type([])):
         raise TypeError("Input must be a list with two elements")
 
     if frame[0] + frame[1] == 10 and frame[0] < 10:
