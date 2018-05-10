@@ -22,7 +22,6 @@ To pull the repository from github use the following command in a terminal
 
 ```
 git clone https://github.com/avramidis/tenpinbowling.git
-
 ```
 
 You will need Python version 3, to install it use the following command in a terminal
