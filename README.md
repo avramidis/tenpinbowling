@@ -35,7 +35,7 @@ sudo apt install python3
 To install tenpinbowling package use the following command in a terminal
 
 ```
-python setup.py install
+python3 setup.py install
 ```
 
 ### Example
