@@ -45,7 +45,7 @@ def checkSpare(frame):
     if checkStrike(frame) is True:
         return False
 
-    if frame[0] + frame[1] == 10 and frame[0] < 10:
+    if frame[0] + frame[1] == 10:
         return True
     else:
         return False
