@@ -45,7 +45,7 @@ An example code that uses tenpinbowling is the following
 ```python
 import tenpinbowling.score
 frames = [[4, 3], [5, 4], [4, 4]]
-score = tenpinbowling.score.getScore(frames,3)
+score = tenpinbowling.score.getScore(frames)
 ```
 
 If the run was successful the output will be 24.
