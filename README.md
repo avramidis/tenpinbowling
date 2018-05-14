@@ -1,6 +1,8 @@
 # tenpinbowling
 
 [![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/avramidis/sodecl/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/avramidis/tenpinbowling.svg?branch=master)](https://travis-ci.org/avramidis/tenpinbowling)
+
 
 tenpinbowling is a Python package that can be used to calculate the score of a 10 pin bowling game. 
 
