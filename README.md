@@ -1,6 +1,6 @@
 # tenpinbowling
 
-[![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/avramidis/sodecl/blob/master/LICENSE)
+[![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/avramidis/sodecl/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/avramidis/tenpinbowling.svg?branch=master)](https://travis-ci.org/avramidis/tenpinbowling)
 
 
