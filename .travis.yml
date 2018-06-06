@@ -15,3 +15,6 @@ install:
 script:
   - cd tests
   - coverage run test_basic.py
+
+after_success:
+  - codecov
