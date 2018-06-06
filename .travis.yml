@@ -7,7 +7,11 @@ python:
   - "3.6"
   - "3.6-dev"  # 3.6 development branch
   - "3.7-dev"  # 3.7 development branch
+
+install:
+  - pip install codecov
+
 # command to run tests
 script:
   - cd tests
-  - python3 test_basic.py
+  - coverage run test_basic.py
